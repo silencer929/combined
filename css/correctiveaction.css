@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: helvetica, sans-serif, Arial;
+    position: relative;
+    font-size: 18px;
+    background-color: #eee;
+}
+
+:root {
+    --green: #64aa5d;
+    --mainwhite: #fff;
+    --chocolate: #bc5d2c;
+    --black: #000;
+    --lightGreen: #64ab5e;
+    --darkGreen: #28a745;
+    --light: #f8f9fa;
+    --blue: #007bff;
+    --forestGreen: #228b22;
+    --brown: #8B4513;
+}
+@media only screen and (min-width:900px){
+    .content-wrapper{
+        display: none;
+    }
+}
+
+.corrective_action_wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    width: min(1300px, 90%);
+    margin: 80px auto;
+    background-color:white;
+    box-shadow: 0 0 10px #fff;
+    border-radius: 10px;
+    flex-wrap: wrap-reverse;
+    position: relative;
+}
+#end-evaluation{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    min-width: 100px;
+    height: 50px;
+    background: var(--green);
+    white-space: nowrap;
+    padding: 0 20px;
+    color: #000;
+    outline-color: var(--lightGreen);
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#end-evaluation:hover{
+    background-color: var(--brown);
+    color: #fff;
+}
+table,form{
+    margin: 20px 0px;
+    line-height: 1.7;
+    margin: 20px 10px;
+    font-size: clamp(18px,1vw, 20px);
+}
+
+table {
+    display: table;
+    border: 2px;
+    border-collapse: collapse;
+    border-left: 1px solid green;
+    width: 600px;
+}
+
+table thead, tfoot {
+    font-size: calc(20px - 5px);
+}
+thead th,tfoot th {
+    border-left: 1px solid green;
+    text-transform: capitalize;
+}
+
+thead,
+tr,
+td,
+th {
+    padding: 10px 5px;
+}
+
+thead, tfoot{
+    background-color: var(--chocolate);
+    border-top: 2px solid green;
+}
+
+thead tr th {
+    border: 1px solid green;
+}
+
+tbody tr td {
+    border-right: 1px solid green;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(30, 140, 70, 0.7);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(40, 150, 53, 0.7);
+}
+tbody tr:hover{
+    background-color:white;
+}
+tbody tr td button{
+    padding: 5px 10px;
+}
+/*add action form*/
+.add-action{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+    width: min(auto,400px);
+}
+.add-action input, .add-action div{
+    margin: 10px 10px;
+    min-width: 400px;
+    padding: 10px 5px;
+    font-size: calc(20px - 5px)
+}
+
+.corrective-action-btns {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: orange;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    background-color: var(--light);
+}
+/*end of add action form */
+/*-----------------------------------------------------*/
+@media only screen and (max-width:967px) and (min-width:600px){
+    .corrective_action_wrapper{
+    }
+    .content-wrapper{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .corrective_action_wrapper {
+        display: none;
+    }
+
+    .content-wrapper {
+        display: block;
+        background-color: var(--mainwhite);
+        height: 90vh;
+        width: 500px;
+        margin: 0 auto;
+        line-height: 1.7;
+        position: relative;
+    }
+    #end-evaluation{
+        position: relative;
+        top:0px;
+        right: 10px;
+        left: 0;
+        margin: 20px 0px;
+    }
+    .table {
+        display: block;
+        padding: 10px 5px;
+        border-collapse: collapse !important;
+    }
+
+    .row {
+        display: flex;
+        width: 460px;
+        min-height: 100px;
+        background-color: white;
+        margin: 10px;
+        border-collapse: collapse !important;
+        padding: 0px 2px;
+        box-shadow: 0 0 5px #000;
+    }
+
+    .comment-action-column {
+        width:100%;
+        height: 50%;
+    }
+
+    .comment-action-column > div:nth-child(odd) {
+        background-color: rgba(225,250,250,0.6);
+    }
+    .comment-action-column > div:nth-child(even) {
+        background-color: rgba(0,0,0,0.5);
+            color: white;
+    }
+
+    .comment-action-column legend {
+        background-color: white;
+        max-width: 100px;
+        color: black;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 5px #000;
+    }
+
+    .buttons-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 5px;
+    }
+
+    .buttons-column button {
+        padding: 10px 5px;
+        box-shadow: 0 0 5px #000;
+    }
+}
